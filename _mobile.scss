@@ -1,0 +1,43 @@
+$breakpoint-mobile: 576px;
+
+@media screen and (max-width:$breakpoint-mobile) { 
+
+    body, html {
+        overflow-x: hidden;
+    }
+
+    main.slideshow {
+        height: 95vh;
+
+        .section-divider {
+            height: 200px;
+            left: -150px;
+        }
+
+        #pattern {
+        display:none;
+        }
+        
+        #subheader {
+            display:none;
+        }
+
+        nav{
+            display:none !important;
+        }
+
+        #logo {
+            margin-top: 50%;
+        }
+    }
+}
+
+@media screen and (min-width:$breakpoint-mobile) {
+    .mobile-nav {
+        display:none;
+    }
+
+    .hamburger {
+        display:none;
+    }
+}
