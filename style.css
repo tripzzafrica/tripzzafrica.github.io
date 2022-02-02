@@ -226,6 +226,25 @@ main.slideshow {
   position: relative;
   overflow: hidden;
 }
+main.slideshow #error404 {
+  height: 50vh;
+}
+main.slideshow #error404 h2 {
+  font-family: tablon;
+  color: #ffcc00;
+  font-size: 200px;
+}
+main.slideshow #error404 p {
+  text-align: center;
+  color: #ededed;
+}
+main.slideshow #error404 small {
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 11px;
+  color: #ededed;
+}
 main.slideshow #subheader {
   position: relative;
   border-bottom: 1px solid #ededed;
@@ -519,4 +538,8 @@ main.contact-slide {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+}
+main.error404-slide {
+  height: 90vh;
+  background: linear-gradient(0deg, #3f3735, #3f3735);
 }/*# sourceMappingURL=style.css.map */
