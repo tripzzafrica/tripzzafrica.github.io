@@ -1,0 +1,50 @@
+$breakpoint-mobile: 576px;
+
+@media screen and (max-width:$breakpoint-mobile) { 
+
+    body, html {
+        overflow-x: hidden;
+    }
+
+    main.about-slide, main.contact-slide {
+        height: 60vh !important;
+
+        #menu-logo {
+            position:relative;
+            z-index:100;
+            
+            img {
+                position: fixed;
+                top: -18px;
+                left: 7px;
+                width: 120px;
+                height: auto;
+            }
+        }
+    }
+
+    .about-section {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        h1 {
+            font-size: 60px;
+            
+        }
+    }
+
+}
+
+@media screen and (min-width:$breakpoint-mobile) {
+    #menu-logo {
+        display:none;
+    }
+
+    .about-section {
+        h1 {
+            margin-top:40px;
+        }
+    }
+} 

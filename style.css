@@ -6,42 +6,46 @@
 .hamburger {
   position: fixed;
   top: 10px;
-  right: 20px;
-  display: block;
-  width: 19px;
-  height: 35px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: none;
-  border: none;
+  right: 0px;
   z-index: 100;
-  transition: top 0.5s;
+  transform: scale(0.7, 0.7);
 }
 
-.hamburger span:nth-child(1), .hamburger span:nth-child(2), .hamburger span:nth-child(3) {
-  width: 100%;
-  height: 2px;
-  margin: 4px 0;
-  transition: 0.4s;
-  display: block;
-  background: #ededed;
+.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+  background-color: white;
+  width: 30px;
 }
 
-.hamburger.is-active span:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-  background: white;
+.hamburger--collapse.is-active .hamburger-inner, .hamburger--collapse.is-active .hamburger-inner:before, .hamburger--collapse.is-active .hamburger-inner:after {
+  background-color: white;
 }
 
-.hamburger.is-active span:nth-child(2) {
-  opacity: 0;
-}
+/*
+	.hamburger span:nth-child(1), .hamburger span:nth-child(2), .hamburger span:nth-child(3) {
+		width:100%;
+		height:2px;
+		margin: 4px 0;
+		transition: 0.4s;
+		display: block;
+		background: $alt-color;
+	}
 
-.hamburger.is-active span:nth-child(3) {
-  transform: rotate(45deg) translate(-9px, -10px);
-  background: white;
-}
+	.hamburger.is-active span:nth-child(1) {
+		transform: rotate(-45deg) translate(-5px, 6px);
+		background: white;
 
+	}
+
+	.hamburger.is-active span:nth-child(2) {
+		opacity:0;
+	}
+
+	.hamburger.is-active span:nth-child(3) {
+		transform: rotate(45deg) translate(-9px, -10px);
+		background: white;
+
+	}
+*/
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -183,6 +187,10 @@ body, html {
   overflow-x: hidden;
 }
 
+p {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: #ededed;
@@ -211,10 +219,10 @@ a:hover {
 }
 
 main.slideshow {
-  height: 95vh;
+  height: 90vh;
   background: linear-gradient(0deg, rgba(154, 31, 103, 0.8), rgba(154, 31, 103, 0.8)), url(assets/photo_2022.jpg);
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   position: relative;
   overflow: hidden;
 }
@@ -290,12 +298,22 @@ main.slideshow #pattern img {
 
 footer {
   background-color: #3f3735;
-  height: 5vh;
+  height: 10vh;
 }
 footer p {
   text-align: center;
   font-size: 10px;
   color: #ededed;
+}
+footer .copyright {
+  display: block;
+  font-size: 8px;
+  color: #757575;
+  text-align: center;
+  margin-top: 5px;
+}
+footer .copyright a {
+  color: #757575;
 }
 
 @media screen and (max-width: 576px) {
@@ -320,7 +338,7 @@ footer p {
     display: none !important;
   }
   main.slideshow #logo {
-    margin-top: 50%;
+    margin-top: 42.5%;
   }
 }
 @media screen and (min-width: 576px) {
@@ -330,5 +348,175 @@ footer p {
 
   .hamburger {
     display: none;
+  }
+}
+main.about-slide {
+  height: 65vh !important;
+  background: linear-gradient(0deg, rgba(154, 31, 103, 0.8), rgba(154, 31, 103, 0.8)), url(assets/photo_2022_1.JPG);
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section {
+  min-height: 390px;
+}
+.about-section h1 {
+  font-family: Tablon;
+  font-size: 100px;
+  color: #ffcc00;
+  text-align: center;
+}
+
+#about-paragraph {
+  background-color: #3f3735;
+}
+#about-paragraph p {
+  color: #ededed;
+  font-size: 11px;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  max-width: 600px;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  body, html {
+    overflow-x: hidden;
+  }
+
+  main.about-slide, main.contact-slide {
+    height: 60vh !important;
+  }
+  main.about-slide #menu-logo, main.contact-slide #menu-logo {
+    position: relative;
+    z-index: 100;
+  }
+  main.about-slide #menu-logo img, main.contact-slide #menu-logo img {
+    position: fixed;
+    top: -18px;
+    left: 7px;
+    width: 120px;
+    height: auto;
+  }
+
+  .about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-section h1 {
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 576px) {
+  #menu-logo {
+    display: none;
+  }
+
+  .about-section h1 {
+    margin-top: 40px;
+  }
+}
+body {
+  background-color: #3f3735;
+}
+
+main.contact-slide {
+  height: 65vh !important;
+  background: linear-gradient(0deg, rgba(154, 31, 103, 0.8), rgba(154, 31, 103, 0.8)), url(assets/photo_2022_2.jpg);
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  overflow: hidden;
+}
+
+#status {
+  font-size: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  padding-top: 10px;
+  padding-bottom: 7px;
+}
+
+#status.success {
+  color: white;
+  -webkit-animation: status 4s ease forwards;
+          animation: status 4s ease forwards;
+}
+
+#status.error {
+  color: red;
+  -webkit-animation: status 4s ease forwards;
+          animation: status 4s ease forwards;
+}
+
+#contact-form {
+  background-color: #3f3735;
+  min-height: 500px;
+  margin-bottom: 30px;
+}
+#contact-form h2 {
+  display: block;
+  text-align: center;
+  font-family: tablon;
+  color: #ffcc00;
+  font-size: 45px;
+}
+#contact-form form label {
+  font-family: tablon;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+#contact-form form input {
+  border: none;
+  margin-bottom: 10px;
+  height: 50px;
+  padding: 20px;
+  width: 100%;
+  font-size: 10px;
+  border-radius: 0;
+}
+#contact-form form textarea {
+  width: 100%;
+  padding: 20px;
+  font-size: 10px;
+  border-radius: 0;
+}
+#contact-form form button {
+  background: none;
+  color: #ffcc00;
+  font-family: tablon;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+#contact-form form input:focus {
+  outline: none;
+}
+#contact-form form textarea:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 576px) {
+  #contact-form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #contact-form h2 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  main.contact-slide {
+    height: 60vh !important;
+  }
+}
+@media screen and (min-width: 576px) {
+  #contact-form {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }/*# sourceMappingURL=style.css.map */

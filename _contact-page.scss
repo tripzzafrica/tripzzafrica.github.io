@@ -1,0 +1,91 @@
+body {
+    background-color: $dark-color;
+}
+
+main.contact-slide {
+    height: 65vh !important;
+    background:linear-gradient(0deg, rgba(154, 31, 103, 0.8), rgba(154, 31, 103, 0.8)), url(assets/photo_2022_2.jpg);
+    background-size:cover;
+    background-position: center top;
+    position:relative;
+    overflow:hidden;
+}
+
+#status {
+    font-size:7px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    padding-top:10px;
+    padding-bottom: 7px;
+}
+
+#status.success {
+    color:white;
+    animation: status 4s ease forwards;
+}
+
+#status.error {
+    color:red;
+    animation: status 4s ease forwards;
+}
+
+#contact-form {
+    background-color: $dark-color;
+    min-height:500px;
+    margin-bottom:30px;
+
+    h2 {
+        display: block;
+        text-align: center;
+        font-family: tablon;
+        color: $sec-color;
+        font-size:45px;
+    }
+
+   form {
+       //width:520px;
+
+       label {
+           font-family: tablon;
+           color: $sec-color;
+           margin-bottom:10px;
+       }
+       input {
+           border:none;
+           margin-bottom:10px;
+           height:50px;
+           padding:20px;
+           width:100%;
+           font-size:10px;
+           border-radius: 0;
+       }
+
+
+        textarea {
+            width:100%;
+            padding:20px;
+            font-size:10px;
+            border-radius: 0;
+        }
+
+        button {
+            background:none;
+            color: $sec-color;
+            font-family: tablon;
+            border:none;
+            display:block;
+            margin: 0 auto;
+        }
+
+        input:focus {
+            outline: none;
+        }
+        
+        textarea:focus {
+            outline: none;
+        }
+
+       
+   }
+}
