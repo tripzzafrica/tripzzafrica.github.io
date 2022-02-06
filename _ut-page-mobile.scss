@@ -1,0 +1,36 @@
+$breakpoint-mobile: 576px;
+
+@media screen and (max-width:$breakpoint-mobile) {
+
+    main.up-slide{
+        #menu-logo {
+            position:relative;
+            z-index:100;
+            
+            img {
+                position: fixed;
+                top: -18px;
+                left: 7px;
+                width: 120px;
+                height: auto;
+            }
+        }
+    }
+
+    #trip-cards {
+    flex-direction: column !important;
+    margin-top:120px;
+    
+    .trip-card.two {
+        height:399px !important;
+        margin-top:20px;
+    }
+}
+
+}
+
+@media screen and (min-width:$breakpoint-mobile) {
+
+
+
+}

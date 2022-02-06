@@ -1,0 +1,118 @@
+main.up-slide {
+    height: 120vh;
+    background:linear-gradient(0deg, rgba(154, 31, 103, 0.8), rgba(154, 31, 103, 0.8));
+    background-size:cover;
+    background-position: center center;
+    position:relative;
+    overflow:hidden;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        //transform: translateX(-50%) translateY(-50%);
+      }
+}
+
+#trip-cards {
+
+    height:80vh;
+    
+    .trip-card {
+        padding:25px;
+        width:349px;
+        height:399px;
+        background-color: $main-color;
+
+        hr {
+            height:2px;
+            background-color: $text-color;
+            width: 90%;
+            opacity: 1;
+        }
+
+        .up-heading {
+
+            position: relative;
+
+        h2 {
+            font-family: Tablon;
+            color:$text-color;
+            letter-spacing: -0.05em;
+            font-size:43px;
+        }
+
+        .up-date {
+            position:absolute;
+            top:12px;
+            right:50px;
+            font-size: 29px;
+            font-weight: 900;
+            letter-spacing: -0.081em;
+            color: $sec-color;
+            font-family: $sec-font;
+        }
+        }
+
+        .up-desc {
+            p {
+                color: $text-color;
+                font-size: 11px;
+                letter-spacing: -0.067em;
+            }
+        }
+
+        .up-footer {
+            .up-price {
+                p {
+                    color: $text-color;
+                    font-family: $sec-font;
+                    font-size: 18px;
+                    letter-spacing: -0.112em;
+                    font-weight: 800;
+                    line-height: 23px;
+
+                    span.up-price-digit {
+                        color:$sec-color;
+                        font-size: 37px;
+                        line-height: 39px;
+                        font-weight: 700;
+                        letter-spacing: -2.37px;
+                    }
+
+                    span.up-price-p {
+                        font-size: 12px;
+                        font-weight: 400;
+                        letter-spacing: -0.5px;
+                    }
+                }
+            }
+
+            .up-btn {
+                a {
+                    font-family: tablon;
+                    color: $sec-color;
+                    border: 4px solid $sec-color;
+                    padding:11px;
+                }
+
+                a:hover {
+                    background-color: $sec-color;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+
+    .trip-card.two {
+        background-color: #9a1f1f;
+        h2 {
+            text-align: center;
+        }
+    }
+}

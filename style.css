@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: Tablon;
   src: url(assets/fonts/Tablon-Round-Black.ttf);
@@ -57,6 +58,8 @@
   background-color: #3f3735;
   padding-top: 120px;
   transition: 0.4s;
+  transition-delay: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .mobile-nav .mblnk:nth-child(1) {
   -webkit-animation-delay: 0.2s;
@@ -225,25 +228,6 @@ main.slideshow {
   background-position: center center;
   position: relative;
   overflow: hidden;
-}
-main.slideshow #error404 {
-  height: 50vh;
-}
-main.slideshow #error404 h2 {
-  font-family: tablon;
-  color: #ffcc00;
-  font-size: 200px;
-}
-main.slideshow #error404 p {
-  text-align: center;
-  color: #ededed;
-}
-main.slideshow #error404 small {
-  display: block;
-  margin-top: 5px;
-  text-align: center;
-  font-size: 11px;
-  color: #ededed;
 }
 main.slideshow #subheader {
   position: relative;
@@ -477,6 +461,38 @@ main.contact-slide {
   min-height: 500px;
   margin-bottom: 30px;
 }
+#contact-form #accordionBasic {
+  margin-bottom: 150px;
+}
+#contact-form #accordionBasic .accordion-item {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+}
+#contact-form #accordionBasic .accordion-item .accordion-collapse.collapsing {
+  border-radius: 0;
+}
+#contact-form #accordionBasic button {
+  background-color: #9a1f67;
+  height: 100px;
+  border-bottom: none;
+  border-radius: 0;
+  font-size: 20px;
+  color: #ededed;
+  box-shadow: none;
+}
+#contact-form #accordionBasic .accordion-body {
+  background-color: #9a1f67;
+  max-width: 583px !important;
+}
+#contact-form #accordionBasic .accordion-button.collapsed::after {
+  background-image: none;
+  display: none;
+}
+#contact-form #accordionBasic .accordion-button::after {
+  background-image: none;
+  display: none;
+}
 #contact-form h2 {
   display: block;
   text-align: center;
@@ -524,6 +540,12 @@ main.contact-slide {
     padding-left: 20px;
     padding-right: 20px;
   }
+  #contact-form .faq-heading {
+    margin-bottom: 25px;
+  }
+  #contact-form .accordion-header {
+    margin-top: 10px;
+  }
   #contact-form h2 {
     font-size: 20px;
     margin-top: 50px;
@@ -538,8 +560,124 @@ main.contact-slide {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  #contact-form .faq-heading {
+    margin-bottom: 50px;
+  }
 }
-main.error404-slide {
-  height: 90vh;
-  background: linear-gradient(0deg, #3f3735, #3f3735);
+main.up-slide {
+  height: 120vh;
+  background: linear-gradient(0deg, rgba(154, 31, 103, 0.8), rgba(154, 31, 103, 0.8));
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+main.up-slide video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+#trip-cards {
+  height: 80vh;
+}
+#trip-cards .trip-card {
+  padding: 25px;
+  width: 349px;
+  height: 399px;
+  background-color: #9a1f67;
+}
+#trip-cards .trip-card hr {
+  height: 2px;
+  background-color: #ededed;
+  width: 90%;
+  opacity: 1;
+}
+#trip-cards .trip-card .up-heading {
+  position: relative;
+}
+#trip-cards .trip-card .up-heading h2 {
+  font-family: Tablon;
+  color: #ededed;
+  letter-spacing: -0.05em;
+  font-size: 43px;
+}
+#trip-cards .trip-card .up-heading .up-date {
+  position: absolute;
+  top: 12px;
+  right: 50px;
+  font-size: 29px;
+  font-weight: 900;
+  letter-spacing: -0.081em;
+  color: #ffcc00;
+  font-family: "Spartan", sans-serif;
+}
+#trip-cards .trip-card .up-desc p {
+  color: #ededed;
+  font-size: 11px;
+  letter-spacing: -0.067em;
+}
+#trip-cards .trip-card .up-footer .up-price p {
+  color: #ededed;
+  font-family: "Spartan", sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.112em;
+  font-weight: 800;
+  line-height: 23px;
+}
+#trip-cards .trip-card .up-footer .up-price p span.up-price-digit {
+  color: #ffcc00;
+  font-size: 37px;
+  line-height: 39px;
+  font-weight: 700;
+  letter-spacing: -2.37px;
+}
+#trip-cards .trip-card .up-footer .up-price p span.up-price-p {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+#trip-cards .trip-card .up-footer .up-btn a {
+  font-family: tablon;
+  color: #ffcc00;
+  border: 4px solid #ffcc00;
+  padding: 11px;
+}
+#trip-cards .trip-card .up-footer .up-btn a:hover {
+  background-color: #ffcc00;
+  color: #ededed;
+}
+#trip-cards .trip-card.two {
+  background-color: #9a1f1f;
+}
+#trip-cards .trip-card.two h2 {
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  main.up-slide #menu-logo {
+    position: relative;
+    z-index: 100;
+  }
+  main.up-slide #menu-logo img {
+    position: fixed;
+    top: -18px;
+    left: 7px;
+    width: 120px;
+    height: auto;
+  }
+
+  #trip-cards {
+    flex-direction: column !important;
+    margin-top: 120px;
+  }
+  #trip-cards .trip-card.two {
+    height: 399px !important;
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

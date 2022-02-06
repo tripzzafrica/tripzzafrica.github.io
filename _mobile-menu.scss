@@ -62,6 +62,8 @@
 	background-color: $dark-color;
 	padding-top: 120px;
 	transition: 0.4s;
+	transition-delay: 0.2s;
+	transition-timing-function: ease-in-out;
 
     .mblnk:nth-child(1) {
         animation-delay: .2s;

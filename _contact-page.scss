@@ -34,6 +34,47 @@ main.contact-slide {
     background-color: $dark-color;
     min-height:500px;
     margin-bottom:30px;
+    
+    
+
+    #accordionBasic {
+        margin-bottom:150px;
+
+        .accordion-item {
+            border:none;
+            border-radius: 0;
+            width:100%;
+
+            .accordion-collapse.collapsing {
+                border-radius: 0;
+            }
+        }
+
+        button {
+            background-color: $main-color;
+            height:100px;
+            border-bottom: none;
+            border-radius: 0;
+            font-size: 20px;
+            color: $text-color;
+            box-shadow:none;
+        }
+
+        .accordion-body {
+            background-color: $main-color;
+            max-width: 583px !important;
+        }
+
+        .accordion-button.collapsed::after {
+            background-image: none;
+            display: none;
+          }
+
+        .accordion-button::after {
+            background-image: none;
+            display: none;
+          }
+    }
 
     h2 {
         display: block;

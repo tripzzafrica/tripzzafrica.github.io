@@ -5,9 +5,18 @@ $breakpoint-mobile: 576px;
     #contact-form {
         padding-left:20px;
         padding-right:20px;
+
+        .faq-heading {
+            margin-bottom: 25px;
+        }
+
+        .accordion-header {
+            margin-top:10px;
+        }
+
         h2 {
             font-size:20px;
-            margin-top:50px;
+            margin-top:50px;    
         }
     }
 
@@ -21,5 +30,9 @@ $breakpoint-mobile: 576px;
     #contact-form {
         padding-top: 50px;
         padding-bottom: 50px;
+
+        .faq-heading {
+            margin-bottom: 50px;
+        }
     }
 } 
