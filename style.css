@@ -680,4 +680,34 @@ main.up-slide video {
     height: 399px !important;
     margin-top: 20px;
   }
+}
+main.error404-slide {
+  height: 90vh;
+  background: linear-gradient(0deg, #3f3735, #3f3735);
+}
+
+#error404 {
+  height: 50vh;
+}
+#error404 h2 {
+  font-family: tablon;
+  color: #ffcc00;
+  font-size: 200px;
+}
+#error404 p {
+  text-align: center;
+  color: #ededed;
+}
+#error404 small {
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 11px;
+  color: #ededed;
+}
+
+@media screen and (max-width: 576px) {
+  #error404 {
+    height: 100vh;
+  }
 }/*# sourceMappingURL=style.css.map */
